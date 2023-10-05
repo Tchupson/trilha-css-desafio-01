@@ -1,58 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trilha de CSS - DIO</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha de CSS - DIO</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;1,900&display=swap');
+        * {
+            font-family: "Raleway", "Comic Sans MS";
+            color: white;
+        }
+        
+        body {
+            background-color: black;
+            text-align: center;
+        }
+        
+        h1 {
+            text-transform: uppercase;
+            color: transparent;
+            background: -webkit-linear-gradient(#33A8DB, #1472B7);
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-weight: 9000;
+        }
+        
+        h2 {
+            text-transform: uppercase;
+            color: #33A8DB;
+        }
+        
+        button {
+            width: 300px;
+            padding: 15px;
+            margin: 10px;
+            font-size: large;
+            font-variant: small-caps;
+            color: lightblue;
+            background-color: transparent;
+            border-image-source: linear-gradient(blue, lightblue);
+            border-image-slice: 10;
+            margin-top: 5px;
+            margin-bottom: 50px;
+        }
+        
+        h1+p {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 550px;
+        }
+        
+        div.logo>img {
+            border-radius: 100%;
+            background-color: rgba(0, 0, 0, 0.138);
+            padding: 30px;
+            margin-top: 50px;
+        }
+        
+        div.banner-content {
+            background-image: url(./assets/images/banner.png);
+            object-fit: contain;
+            background-color: rgba(73, 73, 213, 0.2);
+            border-bottom: 1px solid #33A8DB80;
+        }
+        
+        div.module>span {
+            color: #33A8DB;
+        }
+        
+        div.module {
+            background: rgb(0, 0, 0);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(37, 37, 37, 1) 16%, rgba(37, 37, 37, 1) 100%);
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            height: 40px;
+            margin-bottom: 5px;
+            border-style: solid;
+            border-color: rgb(34, 191, 243);
+            filter: drop-shadow(10px 10px black);
+            line-height: 35px;
+        }
+        
+        [id=transform-world] {
+            background-image: url(./assets/images/woman-code.png);
+            height: 50px;
+            font-weight: bold;
+            object-fit: contain;
+            font-size: 50px;
+            padding: 200px;
+            text-align: left !important;
+            background-size: cover;
+            background-attachment: fixed;
+            text-shadow: 2px 2px #33A8DB;
+            text-transform: lowercase;
+            border-top: 1px solid #33A8DB80;
+            border-bottom: 1px solid #33A8DB80;
+        }
+        
+        footer {
+            padding: 50px;
+            background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2));
+            border-top: 1px solid #33A8DB80;
+        }
+    </style>
 </head>
+
 <body>
-  <header class="banner">
-    <div class="banner-content">
-      <div class="logo">
-        <img src="assets/images/logo.png" title="Logotipo Trilha de CSS DIO" alt="Logotipo Trilha de CSS DIO">
-      </div>
-      <h1>Trilha de CSS da DIO</h1>
-      <p>A nova Trilha de CSS da DIO está disponível. Acesse já e aprenda do zero como desenvolver sites profissionais.</p>
-      <button>Quero me inscrever</button>
-    </div>
-  </header>
-  <main>
-    <section id="course-content">
-      <h2>O que vou aprender?</h2>
-      <p>
-        Temos 3 módulos recheados de conteúdos do básico ao avançado para que você aprenda a 
-        desenvolver sites profissionais utilizando somente HTML e CSS: sem nenhuma biblioteca ou framework a mais.
-      </p>
-      <div class="modules-list">
-        <div class="module">
-          <span>Módulo 01:</span> primeiros passos com CSS
+    <header class="banner">
+        <div class="banner-content">
+            <div class="logo">
+                <img src="assets/images/logo.png" title="Logotipo Trilha de CSS DIO" alt="Logotipo Trilha de CSS DIO">
+            </div>
+            <h1>Trilha de CSS da DIO</h1>
+            <p>A nova Trilha de CSS da DIO está disponível. Acesse já e aprenda do zero como desenvolver sites profissionais.</p>
+            <button>quero me inscrever</button>
         </div>
-        <div class="module">
-          <span>Módulo 02:</span> trabalhando com layouts no CSS
-        </div>
-        <div class="module">
-          <span>Módulo 03:</span> refinando os estilos CSS das nossas páginas
-        </div>
-      </div>
-    </section>
-    <section id="transform-world">
-      <p>TRANSFORME O MUNDO COM A GENTE</p>
-    </section>
-    <section id="professional-challenges">
-      <h2>Evolua e encare novos desafios profissionais</h2>
-      <img src="assets/images/professional-challenges.png" title="Homem lendo depoimentos em um tablet" alt="Homem lendo depoimentos em um tablet">
-      <p>
-        Junte-se ao nosso ecossistema e transforme o mundo com a gente! Todos os dias dezenas de empresas 
-        acessam a nossa plataforma em busca dos talentos mais criativos, dinâmicos e colaborativos, 
-        além do conhecimento técnico. 
-        A nossa missão é te preparar para que você conecte-se com as melhores oportunidades.
-      </p>
-    </section>
-  </main>
-  <footer>
-    <img class="dio-logo" src="assets/images/dio-logo.png" title="Logotipo DIO com o texto make the change" alt="Logotipo DIO com o texto make the change">
-    <p>Acesse <a href="https://dio.me">dio.me</a> e se cadastre agora</p>
-  </footer>
+    </header>
+    <main>
+        <section id="course-content">
+            <h2>O que vou aprender?</h2>
+            <p>
+                Temos 3 módulos recheados de conteúdos do básico ao avançado para que você aprenda a desenvolver sites profissionais utilizando somente HTML e CSS: sem nenhuma biblioteca ou framework a mais.
+            </p>
+            <div class="modules-list">
+                <div class="module">
+                    <span>Módulo 01:</span> primeiros passos com CSS
+                </div>
+                <div class="module">
+                    <span>Módulo 02:</span> trabalhando com layouts no CSS
+                </div>
+                <div class="module">
+                    <span>Módulo 03:</span> refinando os estilos CSS das nossas páginas
+                </div>
+            </div>
+        </section>
+        <section id="transform-world" style="text-align: left;">
+            <p>TRANSFORME<br> O MUNDO <br> COM A GENTE</p>
+        </section>
+        <section id="professional-challenges">
+            <h2>Evolua e encare novos desafios profissionais</h2>
+            <img src="assets/images/professional-challenges.png" title="Homem lendo depoimentos em um tablet" alt="Homem lendo depoimentos em um tablet">
+            <p>
+                Junte-se ao nosso ecossistema e transforme o mundo com a gente! Todos os dias dezenas de empresas acessam a nossa plataforma em busca dos talentos mais criativos, dinâmicos e colaborativos, além do conhecimento técnico. A nossa missão é te preparar para
+                que você conecte-se com as melhores oportunidades.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <img class="dio-logo" src="assets/images/dio-logo.png" title="Logotipo DIO com o texto make the change" alt="Logotipo DIO com o texto make the change">
+        <p>Acesse <a href="https://dio.me">dio.me</a> e se cadastre agora</p>
+    </footer>
 </body>
+
 </html>
